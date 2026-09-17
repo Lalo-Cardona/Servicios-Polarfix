@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b7285">
+<title>PolarFIX | Servicios de Refrigeración en Ciudad Juárez</title>
+<meta name="description" content="Servicios profesionales de refrigeración en Ciudad Juárez: Minisplits, aires evaporativos, aire de ventana y A/C automotriz. ¡Cotiza hoy!">
+
+<!-- Metaetiquetas para vista previa en WhatsApp y Redes Sociales -->
+<meta property="og:title" content="PolarFIX | Servicios de Refrigeración">
+<meta property="og:description" content="Instalación, mantenimiento y reparación de Minisplits, aires evaporativos y A/C automotriz en Cd. Juárez.">
+<meta property="og:image" content="logo de Polarfix.jpg">
+<meta property="og:type" content="website">
+
+<!-- Fuente Moderna desde Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #0f172a;
+  --muted: #475569;
+  --ice: #e0f2fe;
+  --accent: #0284c7;
+  --accent-dark: #0369a1;
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --line: #e2e8f0;
+  --shadow: 0 10px 25px -5px rgba(3, 105, 161, 0.12), 0 8px 10px -6px rgba(3, 105, 161, 0.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #cbd5e1;
+  color: var(--ink);
+  -webkit-tap-highlight-color: transparent;
+}
+
+main {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--bg);
+  min-height: 100vh;
+  box-shadow: 0 0 40px rgba(0,0,0,0.15);
+  position: relative;
+  padding-bottom: 70px;
+}
+
+/* Header & Hero */
+.hero {
+  padding: 32px 20px 24px;
+  text-align: center;
+  background: linear-gradient(180deg, #e0f2fe 0%, #f8fafc 100%);
+}
+
+.logo-container {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 4px solid var(--accent);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--ink);
+}
+
+.tag {
+  margin: 4px 0 10px;
+  color: var(--accent-dark);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.location {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+}
+
+/* Horario de Atención personalizado */
+.schedule-container {
+  margin: 0 0 20px;
+}
+
+.schedule {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.schedule-note {
+  margin: 3px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Botones principales */
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.primary {
+  background: #25d366;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+}
+
+.primary:hover {
+  background: #20bd5a;
+}
+
+.secondary {
+  background: var(--ice);
+  color: var(--accent-dark);
+  border: 1px solid #bae6fd;
+}
+
+.outline {
+  background: #ffffff;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  font-size: 13px;
+  padding: 10px;
+}
+
+/* Acciones Auxiliares */
+.quick-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Secciones */
+section {
+  padding: 20px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 14px;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Grilla de Servicios */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+  background: var(--card-bg);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.card b {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.card span {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.3;
+  display: block;
+}
+
+/* Tarjeta Sobre Nosotros */
+.about {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 18px;
+  line-height: 1.6;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.benefits-list {
+  margin-top: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.benefits-list li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* Call to Action Final */
+.cta-box {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+}
+
+.cta-box h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.cta-box p {
+  margin: 0 0 16px;
+  font-size: 13px;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.btn-white {
+  background: #ffffff;
+  color: var(--accent-dark);
+}
+
+/* Botón flotante inferior de WhatsApp */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  z-index: 99;
+  transition: transform 0.2s;
+}
+
+.floating-whatsapp:active {
+  transform: scale(0.9);
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.small {
+  font-size: 12px;
+  color: var(--muted);
+}
+</style>
+</head>
+<body>
+
+<main>
+  <!-- Botón Flotante para WhatsApp -->
+  <a class="floating-whatsapp" href="https://wa.me/526563471175?text=Hola%20PolarFIX%2C%20requiero%20asistencia%20con%20un%20servicio." aria-label="Contacto por WhatsApp">💬</a>
+
+  <!-- Encabezado / Perfil -->
+  <header class="hero">
+    <div class="logo-container">
+      <img src="logo de Polarfix.jpg" class="logo-img" alt="PolarFIX Logo">
+    </div>
+    <h1>POLARFIX</h1>
+    <p class="tag">Servicios de Refrigeración</p>
+    <div class="location">📍 Ciudad Juárez, Chihuahua</div>
+    
+    <div class="schedule-container">
+      <p class="schedule">🕒 Horario: 8 AM - 6 PM · Lunes - Sábado</p>
+      <p class="schedule-note">* Domingos únicamente con cita programada</p>
+    </div>
+
+    <div class="btn-group">
+      <a class="btn primary" href="https://wa.me/526563471175?text=Hola%20PolarFIX%2C%20quiero%20solicitar%20informaci%C3%B3n%20sobre%20un%20servicio.">
+        💬 Cotizar por WhatsApp
+      </a>
+      <a class="btn secondary" href="tel:+526563471175">
+        📞 Llamar: 656-347-1175
+      </a>
+      
+      <div class="quick-actions">
+        <button class="btn outline" onclick="downloadVCard()">📇 Guardar contacto</button>
+        <button class="btn outline" onclick="shareCard()">🔗 Compartir tarjeta</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Lista de Servicios -->
+  <section>
+    <h2>⚡ Nuestros Servicios</h2>
+    <div class="grid">
+      <div class="card">
+        <b>❄️ Minisplits</b>
+        <span>Mantenimiento, instalación y reparación</span>
+      </div>
+      <div class="card">
+        <b>💨 Evaporativos</b>
+        <span>Servicio preventivo, correctivo y diagnóstico</span>
+      </div>
+      <div class="card">
+        <b>🪟 Aire de ventana</b>
+        <span>Limpieza, mantenimiento y reparación</span>
+      </div>
+      <div class="card">
+        <b>🚗 A/C automotriz</b>
+        <span>Carga de gas, diagnóstico y reparación</span>
+      </div>
+      <div class="card">
+        <b>🛠️ Diagnóstico</b>
+        <span>Detección precisa de fallas eléctricas y fugas</span>
+      </div>
+      <div class="card">
+        <b>🔧 Instalación</b>
+        <span>Montaje profesional y puesta en marcha</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre la empresa -->
+  <section>
+    <h2>🛡️ ¿Por qué PolarFIX?</h2>
+    <div class="about">
+      Ofrecemos atención técnica confiable en Ciudad Juárez con diagnóstico transparente y orientación personalizada antes de efectuar cualquier reparación.
+      
+      <ul class="benefits-list">
+        <li>✅ Técnicos capacitados</li>
+        <li>✅ Cotizaciones rápidas sin compromiso</li>
+        <li>✅ Garantía por escrito en nuestros trabajos*</li>
+      </ul>
+      <p class="small">*Las condiciones de la garantía varían según el tipo de servicio o refacciones utilizadas.</p>
+    </div>
+  </section>
+
+  <!-- Llamado a la Acción -->
+  <section>
+    <div class="cta-box">
+      <h3>¿Necesitas una cotización?</h3>
+      <p>Envíanos por WhatsApp el tipo de equipo, la falla y, si es posible, una fotografía o video del problema.</p>
+      <a class="btn btn-white" href="https://wa.me/526563471175?text=Hola%20PolarFIX.%20Quiero%20cotizar%20un%20servicio.%20Mi%20equipo%20es%3A%20">
+        💬 Enviar mensaje directo
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    © PolarFIX · Servicios de Refrigeración<br>
+    Ciudad Juárez, Chihuahua, México
+  </footer>
+</main>
+
+<script>
+function downloadVCard() {
+  const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:PolarFIX Refrigeración
+ORG:PolarFIX
+TEL;TYPE=CELL,VOICE:+526563471175
+ADR;TYPE=WORK:;;Ciudad Juárez;Chihuahua;;México
+NOTE:Servicios de mantenimiento, instalación y reparación de minisplits, evaporativos y A/C automotriz.
+END:VCARD`;
+
+  const blob = new Blob([vcard], { type: 'text/vcard' });
+  const url = window.URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'PolarFIX_Contacto.vcf';
+  a.click();
+  window.URL.revokeObjectURL(url);
+}
+
+function shareCard() {
+  if (navigator.share) {
+    navigator.share({
+      title: 'PolarFIX | Servicios de Refrigeración',
+      text: 'Contacta a PolarFIX para mantenimiento e instalación de refrigeración en Ciudad Juárez:',
+      url: window.location.href
+    }).catch(() => {});
+  } else {
+    navigator.clipboard.writeText(window.location.href);
+    alert('¡Enlace de la tarjeta copiado al portapapeles!');
+  }
+}
+</script>
+
+</body>
+</html>
